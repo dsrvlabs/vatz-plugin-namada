@@ -3,7 +3,6 @@ package main
 import (
 	"bufio"
 	"bytes"
-	"encoding/json"
 	"flag"
 	"fmt"
 	pluginpb "github.com/dsrvlabs/vatz-proto/plugin/v1"
@@ -131,11 +130,6 @@ func pluginFeature(info, option map[string]*structpb.Value) (sdk.CallResponse, e
 	var msg string
 
 	nextProposalsStr, err := GetLatestProposalList()
-	jsonData, err := json.MarshalIndent(nextProposalsStr, "", "  ")
-	if err != nil {
-		fmt.Println("Error marshaling to JSON:", err)
-	}
-	fmt.Println(string(jsonData))
 	if err != nil {
 		panic(err)
 	}
