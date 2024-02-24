@@ -48,13 +48,17 @@ $ vatz plugin list
 ```
 # Your node have to enable API configuration ({HOME_DIR}/config/app.toml)
 $ node_governance_alarm -apiPort <API server port{default is 1317}> -voterAddr <Account Address>
-2023-05-31T07:07:36Z INF Register module=grpc
-2023-05-31T07:07:36Z INF Start 127.0.0.1 10005 module=sdk
-2023-05-31T07:07:36Z INF Start module=grpc
-2023-05-31T07:08:10Z INF Execute module=grpc
-2023-05-31T07:08:10Z DBG DEBUG : tmp == proposalId module=plugin
-2023-05-31T07:08:10Z INF Lastest proposal is #51
- module=plugin
+2024-02-24T13:35:39Z INF Register module=grpc
+2024-02-24T13:35:39Z INF Start 127.0.0.1 10001 module=sdk
+2024-02-24T13:35:39Z INF Start module=grpc
+2024-02-24T13:37:34Z INF Execute module=grpc
+2024-02-24T13:37:35Z DBG DEBUG : tmp != proposalId module=plugin
+2024-02-24T13:37:35Z INF Last Proposal ID: 194
+Type: PGF steward
+Author: tnam1qppwtk3sp08gg9j60sqa3gmxn3q5pzn25s5hpccl
+Start Epoch: 16
+End Epoch: 18
+Grace Epoch: 20 module=plugin
 ```
 ## Command line arguments
 
