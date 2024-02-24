@@ -10,8 +10,8 @@ Vatz plugin for namada governance monitoring
 ### Install Plugins
 - Install with source
 ```
-$ git clone https://github.com/dsrvlabs/vatz-plugin-sei.git
-$ cd vatz-plugin-sei
+$ git clone https://github.com/dsrvlabs/vatz-plugin-namada.git
+$ cd vatz-plugin-namada
 $ make install
 ```
 - Install with Vatz CLI command
@@ -30,7 +30,7 @@ Flags:
 ```
 > please make sure install path for the plugins repository URL.
 ```
-$ ./vatz plugin install github.com/dsrvlabs/vatz-plugin-sei/plugins/node_governance_alarm node_governance_alarm
+$ ./vatz plugin install github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm node_governance_alarm
 ```
 - Check plugins list with Vatz CLI command
 ```
@@ -38,7 +38,7 @@ $ vatz plugin list
 +-----------------------+------------+---------------------+-------------------------------------------------------------------+---------+
 | NAME                  | IS ENABLED | INSTALL DATE        | REPOSITORY                                                        | VERSION |
 +-----------------------+------------+---------------------+-------------------------------------------------------------------+---------+
-| node_governance_alarm | true       | 2023-09-27 01:15:59 | github.com/dsrvlabs/vatz-plugin-sei/plugins/node_governance_alarm | latest  |
+| node_governance_alarm | true       | 2023-09-27 01:15:59 | github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm | latest  |
 +-----------------------+------------+---------------------+-------------------------------------------------------------------+---------+
 ```
 
@@ -83,4 +83,4 @@ Usage of node_governance_alarm:
 
 ## License
 
-`vatz-plugin-sei` is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html), also included in our repository in the `LICENSE` file.
+`vatz-plugin-namada` is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html), also included in our repository in the `LICENSE` file.

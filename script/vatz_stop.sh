@@ -16,4 +16,4 @@ do
         sleep 1
 done
 
-echo "seid $pid0 is killed."
+echo "namada $pid0 is killed."

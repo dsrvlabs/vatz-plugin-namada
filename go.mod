@@ -1,4 +1,4 @@
-module github.com/dsrvlabs/vatz-plugin-sei
+module github.com/dsrvlabs/vatz-plugin-namada
 
 go 1.18
 

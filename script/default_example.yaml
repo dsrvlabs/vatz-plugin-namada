@@ -1,6 +1,6 @@
 vatz_protocol_info:
   home_path: "~/.vatz"
-  protocol_identifier: "Sei - mainnet - pacific-1"
+  protocol_identifier: "namada - testnet - pacific-1"
   port: 9092
   health_checker_schedule:
     - "0 1 * * *"
