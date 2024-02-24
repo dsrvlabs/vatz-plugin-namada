@@ -89,9 +89,9 @@ func ParseProposals(input string) ([]Proposal, error) {
 			}
 			fmt.Sscanf(line, "Proposal Id: %d", &proposal.ProposalID)
 		} else if strings.HasPrefix(line, "Type:") {
-			fmt.Sscanf(line, "Type: %s", &proposal.Type)
+			proposal.Type = strings.TrimSpace(strings.TrimPrefix(line, "Type:"))
 		} else if strings.HasPrefix(line, "Author:") {
-			fmt.Sscanf(line, "Author: %s", &proposal.Author)
+			proposal.Author = strings.TrimSpace(strings.TrimPrefix(line, "Author:"))
 		} else if strings.HasPrefix(line, "Start Epoch:") {
 			fmt.Sscanf(line, "Start Epoch: %d", &proposal.StartEpoch)
 		} else if strings.HasPrefix(line, "End Epoch:") {
