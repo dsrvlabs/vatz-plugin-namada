@@ -136,7 +136,6 @@ func pluginFeature(info, option map[string]*structpb.Value) (sdk.CallResponse, e
 	}
 
 	nextProposals, err := ParseProposals(nextProposalsStr)
-	print(nextProposals)
 	currentLastProposal := nextProposals[len(nextProposals)-1]
 	if currentLastProposal.ProposalID > lastProposal.ProposalID {
 		lastProposal = currentLastProposal
