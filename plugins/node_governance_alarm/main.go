@@ -45,9 +45,9 @@ var (
 func init() {
 	flag.StringVar(&addr, "addr", defaultAddr, "IP Address(e.g. 0.0.0.0, 127.0.0.1)")
 	flag.IntVar(&port, "port", defaultPort, "Port number")
-	flag.StringVar(&chainId, "voterAddr", defaultChainId, "Need to voter address")
-	flag.StringVar(&baseDir, "voterAddr", defaultBaseDir, "Need to voter address")
-	flag.StringVar(&nodeInfo, "nodeInfo", defaultNodeInfo, "Need to know proposal id")
+	flag.StringVar(&chainId, "chainId", defaultChainId, "Need to Chain ID")
+	flag.StringVar(&baseDir, "baseDir", defaultBaseDir, "Need to Base Dir")
+	flag.StringVar(&nodeInfo, "nodeInfo", defaultNodeInfo, "Need to know Node Info")
 	flag.Parse()
 
 	initialProposalsStr, err := GetLatestProposalList()
