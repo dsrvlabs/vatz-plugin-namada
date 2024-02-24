@@ -29,22 +29,22 @@ Flags:
   -h, --help   help for install
 ```
 > please make sure install path for the plugins repository URL.
+
 ```
-$ ./vatz plugin install github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm node_governance_alarm
+$ ./vatz plugin install https://github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm node_governance_alarm
 ```
 - Check plugins list with Vatz CLI command
 ```
 $ vatz plugin list
-+-----------------------+------------+---------------------+-------------------------------------------------------------------+---------+
-| NAME                  | IS ENABLED | INSTALL DATE        | REPOSITORY                                                        | VERSION |
-+-----------------------+------------+---------------------+-------------------------------------------------------------------+---------+
-| node_governance_alarm | true       | 2023-09-27 01:15:59 | github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm | latest  |
-+-----------------------+------------+---------------------+-------------------------------------------------------------------+---------+
++-----------------------+------------+---------------------+------------------------------------------------------------------------------+---------+
+| NAME                  | IS ENABLED | INSTALL DATE        | REPOSITORY                                                                   | VERSION |
++-----------------------+------------+---------------------+------------------------------------------------------------------------------+---------+
+| node_governance_alarm | true       | 2024-02-24 13:46:07 | https://github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm | latest  |
++-----------------------+------------+---------------------+------------------------------------------------------------------------------+---------+
 ```
 
 ### Run
 > Run as default config or option flags
-
 ```
 # You can run node_governance_alarm with default config without any argument or with your configuration
 $ node_governance_alarm -port 10001 -chainId shielded-expedition.88f17d1d14 -base-dir /mnt/namada -nodeInfo http://127.0.0.1:26657
