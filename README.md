@@ -2,7 +2,7 @@
 Vatz plugin for namada governance monitoring
 
 ## Plugins
-- node_governance_alarm : monitor the new governance proposal and whether or not to vote
+- node_governance_alarm : monitor the new governance proposal
 
 ## Installation and Usage
 > Please make sure [Vatz](https://github.com/dsrvlabs/vatz) is running with proper configuration. [Vatz Installation Guide](https://github.com/dsrvlabs/vatz/blob/main/docs/installation.md)
@@ -46,8 +46,8 @@ $ vatz plugin list
 > Run as default config or option flags
 
 ```
-# Your node have to enable API configuration ({HOME_DIR}/config/app.toml)
-$ node_governance_alarm -apiPort <API server port{default is 1317}> -voterAddr <Account Address>
+# You can run node_governance_alarm with default config without any argument or with your configuration
+$ node_governance_alarm -port 10001 -chainId shielded-expedition.88f17d1d14 -base-dir /mnt/namada -nodeInfo http://127.0.0.1:26657
 2024-02-24T13:35:39Z INF Register module=grpc
 2024-02-24T13:35:39Z INF Start 127.0.0.1 10001 module=sdk
 2024-02-24T13:35:39Z INF Start module=grpc
