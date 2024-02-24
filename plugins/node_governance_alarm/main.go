@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"encoding/json"
 	"flag"
 	"fmt"
 	pluginpb "github.com/dsrvlabs/vatz-proto/plugin/v1"
@@ -101,6 +102,7 @@ func ParseProposals(input string) ([]Proposal, error) {
 	}
 	// Append the last proposal if it exists
 	if proposal.ProposalID != 0 {
+		print(proposal)
 		proposals = append(proposals, proposal)
 	}
 
@@ -124,11 +126,17 @@ func pluginFeature(info, option map[string]*structpb.Value) (sdk.CallResponse, e
 	var msg string
 
 	nextProposalsStr, err := GetLatestProposalList()
+	jsonData, err := json.MarshalIndent(nextProposalsStr, "", "  ")
+	if err != nil {
+		fmt.Println("Error marshaling to JSON:", err)
+	}
+	fmt.Println(string(jsonData))
 	if err != nil {
 		panic(err)
 	}
 
 	nextProposals, err := ParseProposals(nextProposalsStr)
+	print()
 	currentLastProposal := nextProposals[len(nextProposals)-1]
 	if currentLastProposal.ProposalID > lastProposal.ProposalID {
 		lastProposal = currentLastProposal
