@@ -1,4 +1,4 @@
-# vatz-plugin-namda
+# vatz-plugin-namada
 Vatz plugin for namada governance monitoring
 
 ## Plugins
