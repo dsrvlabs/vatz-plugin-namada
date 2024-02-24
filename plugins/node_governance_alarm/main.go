@@ -82,6 +82,7 @@ func ParseProposals(input string) ([]Proposal, error) {
 
 	for scanner.Scan() {
 		line := scanner.Text()
+		fmt.Println("line: ", line)
 		if strings.HasPrefix(line, "Proposal Id:") {
 			if proposal.ProposalID != 0 {
 				proposals = append(proposals, proposal)
