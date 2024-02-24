@@ -63,14 +63,14 @@ $ node_governance_alarm -apiPort <API server port{default is 1317}> -voterAddr <
 Usage of node_governance_alarm:
   -addr string
     	IP Address(e.g. 0.0.0.0, 127.0.0.1) (default "127.0.0.1")
-  -apiPort uint
-    	Need to know proposal id (default 1317)
   -port int
-    	Port number (default 10005)
-  -proposalId uint
-    	Need to know last proposal id
-  -voterAddr string
-    	Need to voter address (default "address")
+    	Port number (default 10001)
+  -chainId string
+    	Need to Chain ID (default:shielded-expedition.88f17d1d14)
+  -baseDir string
+    	Need to Base Dir (default "/mnt/namada")
+  -nodeInfo string
+    	Need to know Node Info (default "http://0.0.0.0:26657")  	
 ```
 
 ## TroubleShooting
