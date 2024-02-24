@@ -18,8 +18,8 @@ const (
 	// Default values.
 	defaultAddr     = "127.0.0.1"
 	defaultPort     = 10001
-	defaultChainId  = "/mnt/namada"
-	defaultBaseDir  = "shielded-expedition.88f17d1d14"
+	defaultBaseDir  = "/mnt/namada"
+	defaultChainId  = "shielded-expedition.88f17d1d14"
 	defaultNodeInfo = "http://0.0.0.0:26657"
 	pluginName      = "node-governance-alarm"
 )
