@@ -102,7 +102,6 @@ func ParseProposals(input string) ([]Proposal, error) {
 	}
 	// Append the last proposal if it exists
 	if proposal.ProposalID != 0 {
-		print(proposal)
 		proposals = append(proposals, proposal)
 	}
 
