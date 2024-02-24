@@ -31,7 +31,7 @@ Flags:
 > please make sure install path for the plugins repository URL.
 
 ```
-$ ./vatz plugin install https://github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm node_governance_alarm
+$ ./vatz plugin install github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm node_governance_alarm
 ```
 - Check plugins list with Vatz CLI command
 ```
@@ -39,7 +39,7 @@ $ vatz plugin list
 +-----------------------+------------+---------------------+------------------------------------------------------------------------------+---------+
 | NAME                  | IS ENABLED | INSTALL DATE        | REPOSITORY                                                                   | VERSION |
 +-----------------------+------------+---------------------+------------------------------------------------------------------------------+---------+
-| node_governance_alarm | true       | 2024-02-24 13:46:07 | https://github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm | latest  |
+| node_governance_alarm | true       | 2024-02-24 13:46:07 | github.com/dsrvlabs/vatz-plugin-namada/plugins/node_governance_alarm | latest  |
 +-----------------------+------------+---------------------+------------------------------------------------------------------------------+---------+
 ```
 
