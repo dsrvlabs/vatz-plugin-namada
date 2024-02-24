@@ -21,9 +21,7 @@ const (
 	defaultChainId  = "/mnt/namada"
 	defaultBaseDir  = "shielded-expedition.88f17d1d14"
 	defaultNodeInfo = "http://0.0.0.0:26657"
-	iterCnt         = 100
-
-	pluginName = "node-governance-alarm"
+	pluginName      = "node-governance-alarm"
 )
 
 type Proposal struct {
