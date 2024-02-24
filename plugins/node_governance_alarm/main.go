@@ -56,6 +56,9 @@ func init() {
 		panic(err)
 	}
 	initialProposals, err := ParseProposals(initialProposalsStr)
+	if err != nil {
+		return
+	}
 	lastProposal = initialProposals[len(initialProposals)-1]
 }
 
@@ -75,34 +78,36 @@ func GetLatestProposalList() (string, error) {
 
 func ParseProposals(input string) ([]Proposal, error) {
 	scanner := bufio.NewScanner(strings.NewReader(input))
-	var (
-		proposals []Proposal
-		proposal  Proposal
-	)
+	var proposals []Proposal
+	var proposal Proposal
 
 	for scanner.Scan() {
-		line := scanner.Text()
-		fmt.Println("line: ", line)
-		if strings.HasPrefix(line, "Proposal Id:") {
-			if proposal.ProposalID != 0 {
+		line := strings.TrimSpace(scanner.Text())
+		// Skip empty lines
+		if line == "" {
+			continue
+		}
+		switch {
+		case strings.HasPrefix(line, "Proposal Id:"):
+			if proposal.ProposalID != 0 { // Save the previous proposal
 				proposals = append(proposals, proposal)
-				proposal = Proposal{} // reset the proposal struct for the next one
 			}
+			proposal = Proposal{} // Reset proposal
 			fmt.Sscanf(line, "Proposal Id: %d", &proposal.ProposalID)
-		} else if strings.HasPrefix(line, "Type:") {
-			proposal.Type = strings.TrimSpace(strings.TrimPrefix(line, "Type:"))
-		} else if strings.HasPrefix(line, "Author:") {
-			proposal.Author = strings.TrimSpace(strings.TrimPrefix(line, "Author:"))
-		} else if strings.HasPrefix(line, "Start Epoch:") {
+		case strings.HasPrefix(line, "Type:"):
+			proposal.Type = strings.TrimPrefix(line, "Type: ")
+		case strings.HasPrefix(line, "Author:"):
+			proposal.Author = strings.TrimPrefix(line, "Author: ")
+		case strings.HasPrefix(line, "Start Epoch:"):
 			fmt.Sscanf(line, "Start Epoch: %d", &proposal.StartEpoch)
-		} else if strings.HasPrefix(line, "End Epoch:") {
+		case strings.HasPrefix(line, "End Epoch:"):
 			fmt.Sscanf(line, "End Epoch: %d", &proposal.EndEpoch)
-		} else if strings.HasPrefix(line, "Grace Epoch:") {
+		case strings.HasPrefix(line, "Grace Epoch:"):
 			fmt.Sscanf(line, "Grace Epoch: %d", &proposal.GraceEpoch)
 		}
 	}
-	// Append the last proposal if it exists
-	if proposal.ProposalID != 0 {
+
+	if proposal.ProposalID != 0 { // Save the last proposal
 		proposals = append(proposals, proposal)
 	}
 
