@@ -4,9 +4,9 @@ set -v
 
 VATZ_PATH="/root/vatz"
 VATZ_PLUGIN_PATH="/root/.vatz"
-CHAIN_ID="your chain id"
+CHAIN_ID="namada chain id"
 BASE_DIR="$HOME/.namada"
-NODE_INFO="rpc node info"
+NODE_INFO="http://localhost:26657"
 NODE_GOVERNANCE_ALARM_PORT="10001"
 
 cd $VATZ_PATH

@@ -1,17 +1,16 @@
 #!/bin/bash
-set -e
 set -v
 
 #Create vatz log folder
-mkdir /var/log/vatz
+mkdir -p /var/log/vatz
 
 # Clone VATZ repository
-cd /root
-git clone git@github.com:dsrvlabs/vatz.git
+cd $HOME
+git clone https://github.com/dsrvlabs/vatz.git
 
 # Compile VATZ
-cd /root/vatz
-make
+cd $HOME/vatz
+make build
 
 ## You will see binary named vatz
 
